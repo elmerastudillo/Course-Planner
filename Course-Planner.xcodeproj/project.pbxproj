@@ -13,6 +13,7 @@
 		277DC0671FD612240086AEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277DC0661FD612240086AEFC /* Assets.xcassets */; };
 		277DC06A1FD612240086AEFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277DC0681FD612240086AEFC /* LaunchScreen.storyboard */; };
 		277DC0761FD612840086AEFC /* Course-Planner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 277DC0741FD612840086AEFC /* Course-Planner.xcdatamodeld */; };
+		277DC07A1FD8710E0086AEFC /* TableDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277DC0791FD8710E0086AEFC /* TableDatasource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		277DC0691FD612240086AEFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		277DC06B1FD612240086AEFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277DC0751FD612840086AEFC /* Course-Planner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Course-Planner.xcdatamodel"; sourceTree = "<group>"; };
+		277DC0791FD8710E0086AEFC /* TableDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDatasource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				277DC05F1FD612240086AEFC /* AppDelegate.swift */,
+				277DC0781FD870EA0086AEFC /* UI */,
 				277DC0611FD612240086AEFC /* ViewController.swift */,
 				277DC0631FD612240086AEFC /* Main.storyboard */,
 				277DC0661FD612240086AEFC /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				277DC06B1FD612240086AEFC /* Info.plist */,
 			);
 			path = "Course-Planner";
+			sourceTree = "<group>";
+		};
+		277DC0781FD870EA0086AEFC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				277DC0791FD8710E0086AEFC /* TableDatasource.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +153,7 @@
 				277DC0761FD612840086AEFC /* Course-Planner.xcdatamodeld in Sources */,
 				277DC0621FD612240086AEFC /* ViewController.swift in Sources */,
 				277DC0601FD612240086AEFC /* AppDelegate.swift in Sources */,
+				277DC07A1FD8710E0086AEFC /* TableDatasource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
