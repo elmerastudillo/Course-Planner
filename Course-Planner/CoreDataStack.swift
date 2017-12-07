@@ -43,7 +43,12 @@ public final class CoreDataStack
     {
         if context.hasChanges
         {
-            
+            do {
+                try context.save()
+            } catch {
+                let error = error as NSError
+                fatalError("Unresolved error \(error)")
+            }
         }
     }
     
