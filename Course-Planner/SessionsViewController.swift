@@ -21,18 +21,6 @@ class SessionsViewController: UIViewController {
     
         self.sessions = course?.session?.allObjects as? [Session]
         
-        
-        
-//        let fetchRequest = NSFetchRequest<Course>(entityName: "Course")
-//        let predicate = NSPredicate(format: "name == %@", (self.course?.name)!)
-//        fetchRequest.predicate = predicate
-//        do {
-//            let fetchResult = try stack.viewContext.fetch(fetchRequest)
-//            self.sessions = course?.session
-//        } catch let error {
-//            print(error)
-//        }
-
         // Do any additional setup after loading the view.
     }
 
