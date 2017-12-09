@@ -11,17 +11,28 @@ import CoreData
 
 class SessionsViewController: UIViewController {
     
+    @IBOutlet weak var sessionTableView: UITableView!
     let stack = CoreDataStack.instance
+    let dataSource = TableViewDataSource(items: [String]())
     
     var course : Course?
     var sessions : [Session]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         self.sessions = course?.session?.allObjects as? [Session]
         
         // Do any additional setup after loading the view.
+        dataSource.configureCell = { (tableview, indexpath) -> UITableViewCell in
+            let session = self.sessions![indexpath.row]
+            let cell = tableview.dequeueReusableCell(withIdentifier: "sessionCell")
+            cell?.textLabel?.text = session.name
+            cell?.detailTextLabel?.text = session.date
+            return cell!
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

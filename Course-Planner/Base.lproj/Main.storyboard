@@ -266,6 +266,7 @@
                         <viewLayoutGuide key="safeArea" id="d40-AL-GLO"/>
                     </view>
                     <connections>
+                        <outlet property="sessionTableView" destination="zy1-d3-xe6" id="DNg-ib-kEn"/>
                         <segue destination="o7z-Uj-E7T" kind="show" id="CHt-Uk-78u"/>
                     </connections>
                 </viewController>
