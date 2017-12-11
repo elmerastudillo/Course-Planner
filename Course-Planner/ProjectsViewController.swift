@@ -10,10 +10,22 @@ import UIKit
 
 class ProjectsViewController: UIViewController {
 
+    @IBOutlet weak var projectsTableView: UITableView!
+    var course: Course?
+    let dataSource = TableViewDataSource(items: [String]())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let projects = course?.projects?.allObjects as? [Project]
+        dataSource.configureCell = {(tableView, indexPath) -> UITableViewCell in
+            let project = projects![indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell")
+            cell?.textLabel?.text = project.name
+            cell?.detailTextLabel?.text = project.due_date
+            return cell!
+        }
     }
 
     override func didReceiveMemoryWarning() {
