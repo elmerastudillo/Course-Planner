@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Course View Controller-->
+        <!--Add Course-->
         <scene sceneID="MkI-V9-MDA">
             <objects>
                 <viewController storyboardIdentifier="AddCourseViewController" id="ier-i4-l5p" customClass="AddCourseViewController" customModule="Course_Planner" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,6 +43,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="K1o-nm-E23"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Course" id="TOa-bX-m4a"/>
                     <connections>
                         <outlet property="courseTextField" destination="v94-26-Edu" id="Jp0-2x-FhV"/>
                         <outlet property="dateTextField" destination="ule-yU-NC4" id="P1l-cC-lvb"/>
@@ -52,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="477.60000000000002" y="-545.57721139430294"/>
         </scene>
-        <!--Add Session View Controller-->
+        <!--Add Session-->
         <scene sceneID="F38-A4-gC5">
             <objects>
-                <viewController id="v6H-bP-ZWj" customClass="addSessionViewController" customModule="Course_Planner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addSessionViewController" id="v6H-bP-ZWj" customClass="addSessionViewController" customModule="Course_Planner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fmo-kR-1zN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,6 +87,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="spq-2e-9oe"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Session" id="83h-b9-0lM"/>
                     <connections>
                         <outlet property="addSessionWasPressed" destination="ijC-BQ-mkH" id="pcJ-oj-XYV"/>
                         <outlet property="dateTextfield" destination="iad-nl-PsT" id="kMD-vB-KpS"/>
@@ -96,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="1209" y="-546"/>
         </scene>
-        <!--Title-->
+        <!--Course-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CourseViewController" customModule="Course_Planner" customModuleProvider="target" sceneMemberID="viewController">
@@ -141,7 +143,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="bQd-au-2yu">
+                    <navigationItem key="navigationItem" title="Course" id="bQd-au-2yu">
                         <barButtonItem key="rightBarButtonItem" title="Add Course" id="S3U-c4-fgO">
                             <connections>
                                 <action selector="addCourseButtonPressed:" destination="BYZ-38-t0r" id="qkn-NV-z3R"/>
@@ -151,6 +153,7 @@
                     <connections>
                         <outlet property="courseTableView" destination="65c-ma-VqL" id="0K3-VK-Bz1"/>
                         <segue destination="Nfm-BY-AtD" kind="show" id="hTA-Ua-e0D"/>
+                        <segue destination="ier-i4-l5p" kind="show" id="atD-Fv-UpO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -195,6 +198,7 @@
                     </view>
                     <connections>
                         <outlet property="projectsTableView" destination="XmJ-ec-15e" id="JdW-Tv-reM"/>
+                        <segue destination="KAV-MN-YCt" kind="show" id="NFS-QB-HZX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SBk-Fh-N1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -223,16 +227,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CG2-ds-rBD">
+                                <rect key="frame" x="147" y="581" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Project"/>
+                                <connections>
+                                    <action selector="addProjectButtonPressed:" destination="KAV-MN-YCt" eventType="touchUpInside" id="zzG-YO-EZj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zLa-jr-A03"/>
                     </view>
+                    <connections>
+                        <outlet property="dueDateTF" destination="hCq-sZ-Mhq" id="pgV-KQ-DQa"/>
+                        <outlet property="nameTF" destination="2J7-Ww-wIX" id="wei-jZ-C97"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsW-QI-Lpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1208.8" y="795.6521739130435"/>
         </scene>
-        <!--Sessions View Controller-->
+        <!--Session-->
         <scene sceneID="9oS-kt-uRg">
             <objects>
                 <viewController storyboardIdentifier="SessionsViewController" id="Nfm-BY-AtD" customClass="SessionsViewController" customModule="Course_Planner" customModuleProvider="target" sceneMemberID="viewController">
@@ -268,9 +284,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d40-AL-GLO"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Session" id="V0g-Hf-fOo">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Sht-4A-VDA">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="miQ-g2-LKA">
+                                <rect key="frame" x="274" y="7" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Session"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="sessionTableView" destination="zy1-d3-xe6" id="DNg-ib-kEn"/>
                         <segue destination="o7z-Uj-E7T" kind="show" id="CHt-Uk-78u"/>
+                        <segue destination="v6H-bP-ZWj" kind="show" id="V3Q-Ru-BPw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgL-mI-KJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
