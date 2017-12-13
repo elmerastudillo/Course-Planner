@@ -10,11 +10,20 @@ import UIKit
 
 class NotesViewController: UIViewController {
     
-    
+    @IBOutlet weak var notesTableView: UITableView!
+    var session : Session?
+    let dataSource = TableViewDataSource(items: [String()])
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let notes = session?.note?.allObjects as? [Note]
+        
+        dataSource.configureCell = { (tableView, indexpath) -> UITableViewCell in
+            let note = notes![indexpath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell")
+            cell?.textLabel?.text = note.title
+            return cell!
+        }
         // Do any additional setup after loading the view.
     }
 
