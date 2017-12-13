@@ -8,7 +8,7 @@
 
 import UIKit
 
-class addSessionViewController: UIViewController {
+class AddSessionViewController: UIViewController {
     
     let stack = CoreDataStack.instance
 
@@ -36,6 +36,7 @@ class addSessionViewController: UIViewController {
         session.date = dateText
         course?.addToSession(session)
         stack.save(context: stack.viewContext)
+        self.navigationController?.popViewController(animated: true)
     }
     
 

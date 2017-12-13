@@ -9,7 +9,12 @@
 import UIKit
 
 class AddNotesViewController: UIViewController {
-
+    
+    let stack = CoreDataStack.instance
+    var session: Session?
+    @IBOutlet weak var titleTF: UITextField!
+    @IBOutlet weak var noteTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,7 +26,16 @@ class AddNotesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func addNoteWasPressed(_ sender: UIButton) {
+        guard let title = titleTF.text,
+            let noteText = noteTF.text
+            else { return }
+        let note = Note(context: stack.viewContext)
+        note.title = title
+        note.note = noteText
+        stack.save(context: stack.viewContext)
+    }
+    
     /*
     // MARK: - Navigation
 

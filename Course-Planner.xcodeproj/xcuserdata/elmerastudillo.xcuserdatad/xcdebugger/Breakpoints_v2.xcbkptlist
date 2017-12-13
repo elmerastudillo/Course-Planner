@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Course-Planner/CourseViewController.swift"
-            timestampString = "534822033.377337"
+            timestampString = "534824238.440321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -22,27 +22,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Course-Planner/CourseViewController.swift"
-            timestampString = "534822033.377783"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Course-Planner/CourseViewController.swift"
-            timestampString = "534822033.377905"
+            timestampString = "534824238.440636"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -54,11 +38,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Course-Planner/CourseViewController.swift"
-            timestampString = "534822033.37799"
+            timestampString = "534824238.440749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -67,14 +51,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Course_Planner.CourseViewController.viewWillAppear(Swift.Bool) -&gt; ()"
                   moduleName = "Course-Planner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/elmerastudillo/Desktop/MakeSchool_MOB3/Course-Planner/Course-Planner/CourseViewController.swift"
-                  timestampString = "534822033.621161"
+                  timestampString = "534822984.377205"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
@@ -82,14 +66,14 @@
                   offsetFromSymbolStart = "970">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (__ObjC.UITableView, Foundation.IndexPath) -&gt; __ObjC.UITableViewCell in Course_Planner.CourseViewController.viewWillAppear(Swift.Bool) -&gt; ()"
                   moduleName = "Course-Planner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/elmerastudillo/Desktop/MakeSchool_MOB3/Course-Planner/Course-Planner/CourseViewController.swift"
-                  timestampString = "534822033.625684"
+                  timestampString = "534822984.387802"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -106,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Course-Planner/CourseViewController.swift"
-            timestampString = "534822033.378078"
+            timestampString = "534824238.440837"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"

@@ -29,11 +29,11 @@ class AddCourseViewController: UIViewController {
             let dateText = dateTextField.text else
         {return}
         
-        let course = Course(context: stack.privateContext)
+        let course = Course(context: stack.viewContext)
         course.name = couseText
         course.times = dateText
         
-        stack.save(context: stack.privateContext)
+        stack.save(context: stack.viewContext)
         
         DispatchQueue.main.async {
             self.navigationController?.popViewController(animated: true)

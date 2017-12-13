@@ -46,7 +46,7 @@ class CourseViewController: UIViewController {
     {
         let fetchRequest = NSFetchRequest<Course>(entityName: "Course")
         do {
-            let fetchResult = try stack.privateContext.fetch(fetchRequest)
+            let fetchResult = try stack.viewContext.fetch(fetchRequest)
 //            let course = Course(context: stack.viewContext)
             self.courses = fetchResult
             print(self.courses)

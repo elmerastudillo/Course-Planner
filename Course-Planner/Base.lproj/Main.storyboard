@@ -56,19 +56,19 @@
         <!--Add Session-->
         <scene sceneID="F38-A4-gC5">
             <objects>
-                <viewController storyboardIdentifier="addSessionViewController" id="v6H-bP-ZWj" customClass="addSessionViewController" customModule="Course_Planner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddSessionViewController" id="v6H-bP-ZWj" customClass="AddSessionViewController" customModule="Course_Planner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fmo-kR-1zN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UIa-Xu-CBD">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UIa-Xu-CBD">
                                 <rect key="frame" x="111" y="100" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iad-nl-PsT">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iad-nl-PsT">
                                 <rect key="frame" x="111" y="214" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -76,11 +76,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijC-BQ-mkH">
-                                <rect key="frame" x="136" y="483" width="46" height="30"/>
+                                <rect key="frame" x="117" y="483" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Add Session"/>
                                 <connections>
-                                    <action selector="addSessionWasPressed:" destination="v6H-bP-ZWj" eventType="touchUpInside" id="QbF-hn-gfF"/>
+                                    <action selector="addSessionWasPressed:" destination="v6H-bP-ZWj" eventType="touchUpInside" id="kB9-SX-0zx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -89,9 +89,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Session" id="83h-b9-0lM"/>
                     <connections>
-                        <outlet property="addSessionWasPressed" destination="ijC-BQ-mkH" id="pcJ-oj-XYV"/>
-                        <outlet property="dateTextfield" destination="iad-nl-PsT" id="kMD-vB-KpS"/>
-                        <outlet property="nameTextField" destination="UIa-Xu-CBD" id="Ztd-Z6-u44"/>
+                        <outlet property="dateTextfield" destination="iad-nl-PsT" id="WeD-NO-Uzo"/>
+                        <outlet property="nameTextField" destination="UIa-Xu-CBD" id="2ge-Nt-7xw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fi-jS-RuF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -219,7 +218,7 @@
         <!--Add Project View Controller-->
         <scene sceneID="bzV-PL-uEu">
             <objects>
-                <viewController storyboardIdentifier="addProjectViewController" id="KAV-MN-YCt" customClass="addProjectViewController" customModule="Course_Planner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddProjectViewController" id="KAV-MN-YCt" customClass="AddProjectViewController" customModule="Course_Planner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PUg-f0-uod">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,12 +270,28 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="wq5-oX-N4J">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sessionCell" textLabel="kOv-FQ-Xb4" detailTextLabel="nqS-4v-Yko" rowHeight="100" style="IBUITableViewCellStyleValue1" id="wq5-oX-N4J">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wq5-oX-N4J" id="tdz-wq-qCM">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kOv-FQ-Xb4">
+                                                    <rect key="frame" x="15" y="40" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nqS-4v-Yko">
+                                                    <rect key="frame" x="316" y="40" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -301,6 +316,9 @@
                                 <rect key="frame" x="274" y="7" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Session"/>
+                                <connections>
+                                    <action selector="addSessionWasPressed:" destination="Nfm-BY-AtD" eventType="touchUpInside" id="sAi-3a-7Cl"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -388,12 +406,19 @@
                                 <rect key="frame" x="156" y="617" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add note"/>
+                                <connections>
+                                    <action selector="addNoteWasPressed:" destination="YhX-zC-Zml" eventType="touchUpInside" id="pst-Mu-r8w"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="s83-kJ-tNJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Notes" id="f7c-wc-wje"/>
+                    <connections>
+                        <outlet property="noteTF" destination="68c-mb-PIO" id="BJX-QD-VdG"/>
+                        <outlet property="titleTF" destination="NYF-tc-xp6" id="KOs-kd-PYY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZCu-DM-vL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

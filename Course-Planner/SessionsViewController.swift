@@ -21,6 +21,10 @@ class SessionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.sessions = course?.session?.allObjects as? [Session]
         dataSource.items = self.sessions!
         self.sessionTableView.dataSource = dataSource
@@ -33,8 +37,6 @@ class SessionsViewController: UIViewController {
             cell?.detailTextLabel?.text = session.date
             return cell!
         }
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +44,13 @@ class SessionsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func addSessionWasPressed(_ sender: UIButton) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let addSessionVC = storyboard.instantiateViewController(withIdentifier: "AddSessionViewController") as! AddSessionViewController
+        addSessionVC.course = self.course
+        self.navigationController?.pushViewController(addSessionVC, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class addProjectViewController: UIViewController {
+class AddProjectViewController: UIViewController {
     
     var course : Course?
     let stack = CoreDataStack.instance
