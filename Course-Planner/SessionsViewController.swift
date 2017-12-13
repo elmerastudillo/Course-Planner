@@ -13,7 +13,7 @@ class SessionsViewController: UIViewController {
     
     @IBOutlet weak var sessionTableView: UITableView!
     let stack = CoreDataStack.instance
-    let dataSource = TableViewDataSource(items: [String]())
+    let dataSource = TableViewDataSource(items: [Session]())
     
     var course : Course?
     var sessions : [Session]?
@@ -22,6 +22,8 @@ class SessionsViewController: UIViewController {
         super.viewDidLoad()
         
         self.sessions = course?.session?.allObjects as? [Session]
+        dataSource.items = self.sessions!
+        self.sessionTableView.dataSource = dataSource
         
         // Do any additional setup after loading the view.
         dataSource.configureCell = { (tableview, indexpath) -> UITableViewCell in

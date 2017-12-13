@@ -11,7 +11,7 @@ import CoreData
 
 class CourseViewController: UIViewController {
     @IBOutlet weak var courseTableView: UITableView!
-    var datasource = TableViewDataSource(items: [String]())
+    var datasource = TableViewDataSource(items: [Course]())
     var courses : [Course]?
     let stack = CoreDataStack.instance
     
@@ -19,19 +19,22 @@ class CourseViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         fetchFromCoreData()
+        datasource.items = self.courses!
         courseTableView.dataSource = datasource
-        
+        print("courses is equal to \(self.courses)")
         datasource.configureCell = { (tableview, indexpath) -> UITableViewCell in
-            let cell = tableview.dequeueReusableCell(withIdentifier: "", for: indexpath)
+            let cell = tableview.dequeueReusableCell(withIdentifier: "courseCell", for: indexpath) as! CourseCell
             guard let allCourses = self.courses else {
                 return cell
             }
             let course = allCourses[indexpath.row]
-            cell.textLabel?.text = course.name
+            cell.nameLabel.text = course.name
             return cell
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
