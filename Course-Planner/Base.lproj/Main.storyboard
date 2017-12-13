@@ -303,7 +303,7 @@
             </objects>
             <point key="canvasLocation" x="1226" y="134"/>
         </scene>
-        <!--Notes View Controller-->
+        <!--Notes-->
         <scene sceneID="XHh-Id-InQ">
             <objects>
                 <viewController storyboardIdentifier="NotesViewController" id="o7z-Uj-E7T" customClass="NotesViewController" customModule="Course_Planner" customModuleProvider="target" sceneMemberID="viewController">
@@ -339,18 +339,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XPj-LR-F7Z"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Notes" id="8OW-GH-Sr9">
+                        <barButtonItem key="rightBarButtonItem" title="add Notes" id="3vf-p4-YVK"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="notesTableView" destination="4un-I5-bEG" id="AZF-Bn-T6a"/>
+                        <segue destination="YhX-zC-Zml" kind="show" id="zOV-Xp-aoO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4X-kg-cBF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1929" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Notes-->
         <scene sceneID="RtJ-Q8-TO8">
             <objects>
-                <viewController id="YhX-zC-Zml" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddNotesViewController" id="YhX-zC-Zml" customClass="AddNotesViewController" customModule="Course_Planner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ajx-hT-iu6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,6 +382,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="s83-kJ-tNJ"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Notes" id="f7c-wc-wje"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZCu-DM-vL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

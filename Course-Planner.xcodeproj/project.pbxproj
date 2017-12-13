@@ -19,7 +19,7 @@
 		277DC0801FDB233E0086AEFC /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277DC07F1FDB233D0086AEFC /* SessionsViewController.swift */; };
 		277DC0821FDB23590086AEFC /* addSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277DC0811FDB23590086AEFC /* addSessionViewController.swift */; };
 		277DC0841FDB23650086AEFC /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277DC0831FDB23650086AEFC /* NotesViewController.swift */; };
-		277DC0861FDB23720086AEFC /* addNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277DC0851FDB23720086AEFC /* addNotesViewController.swift */; };
+		277DC0861FDB23720086AEFC /* AddNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277DC0851FDB23720086AEFC /* AddNotesViewController.swift */; };
 		277DC0881FDB538C0086AEFC /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277DC0871FDB538C0086AEFC /* ProjectsViewController.swift */; };
 		277DC08A1FDB53AC0086AEFC /* addProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277DC0891FDB53AC0086AEFC /* addProjectViewController.swift */; };
 /* End PBXBuildFile section */
@@ -39,7 +39,7 @@
 		277DC07F1FDB233D0086AEFC /* SessionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
 		277DC0811FDB23590086AEFC /* addSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addSessionViewController.swift; sourceTree = "<group>"; };
 		277DC0831FDB23650086AEFC /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
-		277DC0851FDB23720086AEFC /* addNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNotesViewController.swift; sourceTree = "<group>"; };
+		277DC0851FDB23720086AEFC /* AddNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesViewController.swift; sourceTree = "<group>"; };
 		277DC0871FDB538C0086AEFC /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		277DC0891FDB53AC0086AEFC /* addProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addProjectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,7 +83,7 @@
 				277DC0871FDB538C0086AEFC /* ProjectsViewController.swift */,
 				277DC0891FDB53AC0086AEFC /* addProjectViewController.swift */,
 				277DC0831FDB23650086AEFC /* NotesViewController.swift */,
-				277DC0851FDB23720086AEFC /* addNotesViewController.swift */,
+				277DC0851FDB23720086AEFC /* AddNotesViewController.swift */,
 				277DC07B1FD8B5DF0086AEFC /* CoreDataStack.swift */,
 				277DC0631FD612240086AEFC /* Main.storyboard */,
 				277DC0661FD612240086AEFC /* Assets.xcassets */,
@@ -179,7 +179,7 @@
 				277DC0881FDB538C0086AEFC /* ProjectsViewController.swift in Sources */,
 				277DC0761FD612840086AEFC /* Course-Planner.xcdatamodeld in Sources */,
 				277DC0801FDB233E0086AEFC /* SessionsViewController.swift in Sources */,
-				277DC0861FDB23720086AEFC /* addNotesViewController.swift in Sources */,
+				277DC0861FDB23720086AEFC /* AddNotesViewController.swift in Sources */,
 				277DC0621FD612240086AEFC /* CourseViewController.swift in Sources */,
 				277DC0841FDB23650086AEFC /* NotesViewController.swift in Sources */,
 				277DC08A1FDB53AC0086AEFC /* addProjectViewController.swift in Sources */,
