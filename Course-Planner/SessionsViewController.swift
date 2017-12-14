@@ -37,6 +37,8 @@ class SessionsViewController: UIViewController {
             cell?.detailTextLabel?.text = session.date
             return cell!
         }
+        
+        self.sessionTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,4 +63,15 @@ class SessionsViewController: UIViewController {
     }
     */
 
+}
+
+extension SessionsViewController: UITableViewDelegate
+{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let session = self.sessions![indexPath.row]
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let notesVC = storyboard.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
+        notesVC.session = session
+        self.navigationController?.pushViewController(notesVC, animated: true)
+    }
 }

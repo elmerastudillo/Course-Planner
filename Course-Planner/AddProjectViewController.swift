@@ -37,6 +37,10 @@ class AddProjectViewController: UIViewController {
         project.completed = false
         course?.addToProjects(project)
         stack.save(context: stack.viewContext)
+        let storyboard = UIStoryboard(name: "Main", bundle:nil)
+        let projectVC = storyboard.instantiateViewController(withIdentifier: "ProjectsViewController") as! ProjectsViewController
+        projectVC.course = course
+        self.navigationController?.popToViewController(projectVC, animated: true)
     }
     
     /*

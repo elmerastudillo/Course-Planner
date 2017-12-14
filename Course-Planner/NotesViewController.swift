@@ -32,7 +32,13 @@ class NotesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func addNotesButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let addNotesVC = storyboard.instantiateViewController(withIdentifier: "AddNotesViewController") as! AddNotesViewController
+        addNotesVC.session = self.session
+        self.navigationController?.pushViewController(addNotesVC, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

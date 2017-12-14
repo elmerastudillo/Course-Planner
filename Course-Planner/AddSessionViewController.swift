@@ -37,6 +37,10 @@ class AddSessionViewController: UIViewController {
         course?.addToSession(session)
         stack.save(context: stack.viewContext)
         self.navigationController?.popViewController(animated: true)
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let sessionVC = storyboard.instantiateViewController(withIdentifier: "SessionsViewController") as! SessionsViewController
+        sessionVC.course = course
+        self.navigationController?.popToViewController(sessionVC, animated: true)
     }
     
 
