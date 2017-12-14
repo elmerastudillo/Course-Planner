@@ -12,14 +12,16 @@ class NotesViewController: UIViewController {
     
     @IBOutlet weak var notesTableView: UITableView!
     var session : Session?
-    let dataSource = TableViewDataSource(items: [String()])
+    let dataSource = TableViewDataSource(items: [Note()])
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let notes = session?.note?.allObjects as? [Note]
+        guard let notes = session?.note?.allObjects as? [Note] else { return }
         
+        dataSource.items = notes
+        notesTableView.dataSource = dataSource
         dataSource.configureCell = { (tableView, indexpath) -> UITableViewCell in
-            let note = notes![indexpath.row]
+            let note = notes[indexpath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell")
             cell?.textLabel?.text = note.title
             return cell!

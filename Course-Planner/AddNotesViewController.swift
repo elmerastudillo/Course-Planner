@@ -35,9 +35,12 @@ class AddNotesViewController: UIViewController {
         note.note = noteText
         stack.save(context: stack.viewContext)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let notesVC = storyboard.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
-        notesVC.session = session
-        self.navigationController?.popToViewController(notesVC, animated: true)
+        let notesVC = storyboard.instantiateViewController(withIdentifier: "NotesViewController") as? NotesViewController
+        notesVC?.session = session
+        if let notesViewController = notesVC
+        {
+            self.navigationController?.popToViewController(notesViewController, animated: true)
+        }
     }
     
     /*

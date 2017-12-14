@@ -338,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgL-mI-KJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1226" y="134"/>
+            <point key="canvasLocation" x="1209" y="134"/>
         </scene>
         <!--Notes-->
         <scene sceneID="XHh-Id-InQ">
@@ -377,7 +377,11 @@
                         <viewLayoutGuide key="safeArea" id="XPj-LR-F7Z"/>
                     </view>
                     <navigationItem key="navigationItem" title="Notes" id="8OW-GH-Sr9">
-                        <barButtonItem key="rightBarButtonItem" title="add Notes" id="3vf-p4-YVK"/>
+                        <barButtonItem key="rightBarButtonItem" title="add Notes" id="3vf-p4-YVK">
+                            <connections>
+                                <action selector="addNotesButtonPressed:" destination="o7z-Uj-E7T" id="tGx-kM-AH3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="notesTableView" destination="4un-I5-bEG" id="AZF-Bn-T6a"/>
