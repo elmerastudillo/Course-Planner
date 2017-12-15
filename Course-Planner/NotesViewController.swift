@@ -17,7 +17,7 @@ class NotesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let notes = session?.note?.allObjects as? [Note] else { return }
-        
+        print(notes)
         dataSource.items = notes
         notesTableView.dataSource = dataSource
         dataSource.configureCell = { (tableView, indexpath) -> UITableViewCell in

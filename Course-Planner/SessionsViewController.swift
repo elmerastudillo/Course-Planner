@@ -68,7 +68,8 @@ class SessionsViewController: UIViewController {
 extension SessionsViewController: UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let session = self.sessions![indexPath.row]
+        let sessions = course?.session?.allObjects as! [Session]
+        let session = sessions[indexPath.row]
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let notesVC = storyboard.instantiateViewController(withIdentifier: "NotesViewController") as! NotesViewController
         notesVC.session = session

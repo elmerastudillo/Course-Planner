@@ -33,14 +33,13 @@ class AddNotesViewController: UIViewController {
         let note = Note(context: stack.viewContext)
         note.title = title
         note.note = noteText
+        session?.addToNote(note)
         stack.save(context: stack.viewContext)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let notesVC = storyboard.instantiateViewController(withIdentifier: "NotesViewController") as? NotesViewController
-        notesVC?.session = session
-        if let notesViewController = notesVC
-        {
-            self.navigationController?.popToViewController(notesViewController, animated: true)
-        }
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let notesVC = storyboard.instantiateViewController(withIdentifier: "NotesViewController") as? NotesViewController
+//        notesVC?.session = session
+//        self.navigationController?.popToViewController(notesVC!, animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     /*
