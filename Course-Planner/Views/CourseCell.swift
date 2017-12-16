@@ -11,6 +11,7 @@ import UIKit
 class CourseCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var timesLabel: UILabel!
+    @IBOutlet weak var projectsButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

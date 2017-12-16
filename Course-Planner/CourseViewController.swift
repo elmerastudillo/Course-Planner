@@ -25,7 +25,6 @@ class CourseViewController: UIViewController {
         fetchFromCoreData()
         datasource.items = self.courses!
         courseTableView.dataSource = datasource
-//        print("courses is equal to \(self.courses)")
         datasource.configureCell = { (tableview, indexpath) -> UITableViewCell in
             let cell = tableview.dequeueReusableCell(withIdentifier: "courseCell", for: indexpath) as! CourseCell
             guard let allCourses = self.courses else {
@@ -33,6 +32,7 @@ class CourseViewController: UIViewController {
             }
             let course = allCourses[indexpath.row]
             cell.nameLabel.text = course.name
+            cell.projectsButton.addTarget(self, action: #selector(self.projectButtonPressed), for: UIControlEvents.touchDown)
             return cell
         }
     }
@@ -40,6 +40,20 @@ class CourseViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func projectButtonPressed(sender: UIButton)
+    {
+        let point = self.courseTableView.convert(CGPoint.zero, from: sender)
+        guard let indexPath = self.courseTableView.indexPathForRow(at: point) else {
+            fatalError("Can't find point in tableview")
+        }
+        guard let allCourses = self.courses else { return }
+        let course = allCourses[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let projectVC = storyboard.instantiateViewController(withIdentifier: "ProjectsViewController") as! ProjectsViewController
+        projectVC.course = course
+        self.navigationController?.pushViewController(projectVC, animated: true)
     }
     
     func fetchFromCoreData()

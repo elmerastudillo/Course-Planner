@@ -12,13 +12,20 @@ class ProjectsViewController: UIViewController {
 
     @IBOutlet weak var projectsTableView: UITableView!
     var course: Course?
-    let dataSource = TableViewDataSource(items: [String]())
+    let dataSource = TableViewDataSource(items: [Project]())
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         let projects = course?.projects?.allObjects as? [Project]
+        dataSource.items = projects!
+        projectsTableView.dataSource = dataSource
         dataSource.configureCell = {(tableView, indexPath) -> UITableViewCell in
             let project = projects![indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell")
@@ -26,6 +33,8 @@ class ProjectsViewController: UIViewController {
             cell?.detailTextLabel?.text = project.due_date
             return cell!
         }
+        
+        self.projectsTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +42,14 @@ class ProjectsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func addProjectButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let addProjectVC = storyboard.instantiateViewController(withIdentifier: "AddProjectViewController") as! AddProjectViewController
+        addProjectVC.course = course
+        self.navigationController?.pushViewController(addProjectVC, animated: true)
+        
+    }
+    
     /*
     // MARK: - Navigation
 
