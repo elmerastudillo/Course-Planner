@@ -12,10 +12,16 @@ class NotesViewController: UIViewController {
     
     @IBOutlet weak var notesTableView: UITableView!
     var session : Session?
-    let dataSource = TableViewDataSource(items: [Note()])
+    let dataSource = TableViewDataSource(items: [Note]())
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         guard let notes = session?.note?.allObjects as? [Note] else { return }
         print(notes)
         dataSource.items = notes
@@ -26,7 +32,8 @@ class NotesViewController: UIViewController {
             cell?.textLabel?.text = note.title
             return cell!
         }
-        // Do any additional setup after loading the view.
+        
+        self.notesTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

@@ -25,7 +25,7 @@ class CourseViewController: UIViewController {
         fetchFromCoreData()
         datasource.items = self.courses!
         courseTableView.dataSource = datasource
-        print("courses is equal to \(self.courses)")
+//        print("courses is equal to \(self.courses)")
         datasource.configureCell = { (tableview, indexpath) -> UITableViewCell in
             let cell = tableview.dequeueReusableCell(withIdentifier: "courseCell", for: indexpath) as! CourseCell
             guard let allCourses = self.courses else {
@@ -49,7 +49,6 @@ class CourseViewController: UIViewController {
             let fetchResult = try stack.viewContext.fetch(fetchRequest)
 //            let course = Course(context: stack.viewContext)
             self.courses = fetchResult
-            print(self.courses)
             DispatchQueue.main.async {
                 self.courseTableView.reloadData()
             }
